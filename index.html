@@ -87,7 +87,7 @@ input:checked + .slider:before {
     <body>
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
-            <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="border-end" id="sidebar-wrapper">
                 <div class="sidebar-heading border-bottom bg-light" onClick="window.location.reload();" id="heading">Double Life of a Writer</div>
                 <div class="list-group list-group-flush">
                     <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(1)">Chapter 1</a>
@@ -116,7 +116,7 @@ input:checked + .slider:before {
                 <!-- Top navigation-->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                     <div class="container-fluid">
-                        <button class="btn btn-primary" id="sidebarToggle">Chapters</button>
+                        <button class="btn btn-primary" id="sidebarToggle" style="display: none;">Chapters</button>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
@@ -143,7 +143,7 @@ input:checked + .slider:before {
                     </div>
                 </nav>
                 <!-- Page content-->
-                <div class="container-fluid">
+                <div class="container-fluid" onclick="buttonClick()">
                     <h1 class="mt-4" id="header">ပင်လယ်ထားခဲ့တဲ့ ဖိနပ်တစ်ရံ</h1>
                     <br />
                     <p id="body"> စ/ဆုံး
@@ -1784,6 +1784,11 @@ input:checked + .slider:before {
         <script src="js/scripts.js"></script>
 
         <script>
+            function buttonClick(){
+                var pagebutton= document.getElementById("sidebarToggle");
+                pagebutton.click();
+            }
+
             function changeBgColor() {
                 if (document.getElementById("toggle").value == "on") {
                     document.getElementById("toggle").value = "off";
@@ -1795,6 +1800,7 @@ input:checked + .slider:before {
                         collection[i].style.background = "black";
                         collection[i].style.color = "white";
                     }
+                    document.getElementById("sidebar-wrapper").background = "black"
                 } else {
                     document.getElementById("toggle").value = "on";
                     document.body.style.background = "white";
@@ -1805,6 +1811,7 @@ input:checked + .slider:before {
                         collection[i].style.background = "white";
                         collection[i].style.color = "black";
                     }
+                    document.getElementById("sidebar-wrapper").background = "white"
                 }
             }
 function loadChapter(chapter) {
