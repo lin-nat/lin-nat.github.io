@@ -14,33 +14,92 @@
             .paragraph {
                 display: none;
             }
+            .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
         </style>
     </head>
     <body>
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light" onClick="window.location.reload();">Double Life of a Writer</div>
+                <div class="sidebar-heading border-bottom bg-light" onClick="window.location.reload();" id="heading">Double Life of a Writer</div>
                 <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(1)">Chapter 1</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(2)">Chapter 2</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(3)">Chapter 3</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(4)">Chapter 4</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(5)">Chapter 5</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(6)">Chapter 6</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(7)">Chapter 7</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(8)">Chapter 8</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(9)">Chapter 9</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(10)">Chapter 10</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(11)">Chapter 11</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(12)">Chapter 12</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(13)">Chapter 13</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(14)">Chapter 14</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(15)">Chapter 15</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(16)">Chapter 16</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(17)">Chapter 17</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(18)">Chapter 18</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" id="btnClick" onclick="loadChapter(19)">Chapter 19</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(1)">Chapter 1</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(2)">Chapter 2</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(3)">Chapter 3</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(4)">Chapter 4</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(5)">Chapter 5</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(6)">Chapter 6</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(7)">Chapter 7</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(8)">Chapter 8</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(9)">Chapter 9</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(10)">Chapter 10</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(11)">Chapter 11</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(12)">Chapter 12</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(13)">Chapter 13</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(14)">Chapter 14</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(15)">Chapter 15</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(16)">Chapter 16</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(17)">Chapter 17</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(18)">Chapter 18</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(19)">Chapter 19</a>
                 </div>
             </div>
             <!-- Page content wrapper-->
@@ -55,6 +114,12 @@
                                 <li class="nav-item active"><a class="nav-link" href="#!">Novels</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#!">Short Stories</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#!">Articles</a></li>
+                                <li class="nav-item">
+                                    <label class="switch">
+                                        <input type="checkbox" id="toggle" onclick="changeBgColor()">
+                                        <span class="slider round"></span>
+                                      </label>
+                                </li>
                                 <!-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -1718,8 +1783,31 @@
         
         gtag('config', 'G-LE6MRZD2M2');
         </script>
-        
+
         <script>
+            function changeBgColor() {
+                if (document.getElementById("toggle").value == "on") {
+                    document.getElementById("toggle").value = "off";
+                    document.body.style.background = "black";
+                    document.querySelectorAll('p').forEach(e => e.style.color = "white");
+                    document.querySelectorAll('h1').forEach(e => e.style.color = "white");
+                    var collection = document.getElementsByClassName('btnClick');
+                    for(var i = 0; i < collection.length; ++i) {
+                        collection[i].style.background = "black";
+                        collection[i].style.color = "white";
+                    }
+                } else {
+                    document.getElementById("toggle").value = "on";
+                    document.body.style.background = "white";
+                    document.querySelectorAll('p').forEach(e => e.style.color = "black");
+                    document.querySelectorAll('h1').forEach(e => e.style.color = "black");
+                    var collection = document.getElementsByClassName('btnClick');
+                    for(var i = 0; i < collection.length; ++i) {
+                        collection[i].style.background = "white";
+                        collection[i].style.color = "black";
+                    }
+                }
+            }
 function loadChapter(chapter) {
             switch (chapter) {
                 case 1: document.getElementById("header").innerHTML = "အခန်း ၁။";
