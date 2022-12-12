@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LE6MRZD2M2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LE6MRZD2M2');
+        </script>
+        
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Double Life of a Writer</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .paragraph {
+                display: none;
+            }
+            .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+        </style>
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light" onClick="window.location.reload();" id="heading">Double Life of a Writer</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(1)">၁။ Male Gaze in Films and Arts</a>
+                    <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(2)">Chapter 2</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(3)">Chapter 3</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(4)">Chapter 4</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(5)">Chapter 5</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(6)">Chapter 6</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(7)">Chapter 7</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(8)">Chapter 8</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(9)">Chapter 9</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(10)">Chapter 10</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(11)">Chapter 11</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(12)">Chapter 12</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(13)">Chapter 13</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(14)">Chapter 14</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(15)">Chapter 15</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(16)">Chapter 16</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(17)">Chapter 17</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(18)">Chapter 18</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 btnClick" href="#!" onclick="loadChapter(19)">Chapter 19</a> -->
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle">Chapters</button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="index.html">Novels</a></li>
+                                <li class="nav-item"><a class="nav-link" href="shortStories.html">Short Stories</a></li>
+                                <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
+                                <li class="nav-item">
+                                    <label class="switch">
+                                        <input type="checkbox" id="toggle" onclick="changeBgColor()">
+                                        <span class="slider round"></span>
+                                      </label>
+                                </li>
+                                <!-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#!">Action</a>
+                                        <a class="dropdown-item" href="#!">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#!">Something else here</a>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container-fluid" onclick="buttonClick()">
+                    <h1 class="mt-4" id="header">ဆောင်းပါးများ</h1>
+                    <br />
+                    <p id="body">
+                        ၁။ ရုပ်ရှင်၊ အနုပညာနှင့် အခြားသောကြားခံနယ်တို့မှ အမျိုးသားများ၏ ငေးစိုက်ကြည့်မှု (Male Gaze) <br>
+                        </p>
+                        
+                    <p id="chapter1" class="paragraph">
+                        Male Gaze ကို အမျိုးသားများ၏ ငေးစိုက်ကြည့်မှုလို့ဘာသာပြန်ရမှာထက် မျက်စိအစာကျွေးမှု လို့ဘာသာပြန်တာ ပိုသင့်လျော်မယ်ထင်တယ်။ ဒါပေမဲ့ ကျွန်တော်က ဘာသာပြန်တာသိပ်တော်တဲ့သူ မဟုတ်တော့ Gaze ဆိုတဲ့စကားလုံးရဲ့ဟန်လေးပျောက်သွားမှာစိုးတာနဲ့ ငေးစိုက်ကြည့်မှု လို့ပဲ ဘာသာပြန်လိုက်ပါတယ်။ <br />
+                        သူ့ရဲ့သဘောက ရုပ်ရှင် သို့မဟုတ် ကြားခံအနုပညာနယ်တစ်ခုခုမှာ အမျိုးသမီးတွေဟာ အမျိုးသားတွေနဲ့ သာတူညီမျှလူသားဇာတ်ကောင်တွေအနေနဲ့ တည်ရှိနေကြတာမဟုတ်ဘဲ အမျိုးသားတွေရဲ့အမြင်၊ ရှုထောင့်ကနေ တစ်ဆင့် သရုပ်ဖော်ခြင်းခံနေရတာမျိုးလို့ဖော်ပြထားတယ်။ ဒီ အယူအဆကို လိင်အခြေပြုဖိနှိပ်မှုတွန်းလှန်‌ရေးဝါဒီ ရုပ်ရှင် ဝေဖန်ရေးဆရာမ Laura Mulvey က ၁၉၇၅ ခုနှစ်မှာ ထွက်ခဲ့တဲ့ သူ့ရဲ့ Visual Pleasure and Narrative Cinema ဆိုတဲ့ အက်ဆေးမှာ စတင်မိတ်ဆက်ခဲ့တယ်။ (ကြိုးစားပြီး ဖတ်ကြည့်ခဲ့သေးပေမဲ့ နားမလည်တာများနေတာကြောင့် လက်လျှော့ခဲ့) Mulvey တင်ပြခဲ့တဲ့ ယူဆချက်ကို The Male Gaze Theory (အမျိုးသားများ၏ ငေးစိုက်ကြည့်ခြင်း သီအိုရီ) အနေနဲ့ လူသိများကြတယ်။ သူ့ရဲ့ သီအိုရီက ရုပ်ရှင်တွေမှာပါဝင်နေတဲ့ မေးခွန်းမထုတ်ဘဲအလွယ်တကူ လက်ခံထားတဲ့ ဂျန်ဒါ(gender) နဲ့ပက်သတ်တဲ့ ပြသနာတွေကို ခွဲခြားထုတ်ဖော်နိုင်ဖို့ အထောက်အကူပြုခဲ့ပေမဲ့ အခုလိုအချိန် ရာစုနှစ် တစ်ဝက်နီပါး ကြာပြီးတာတောင်မှ ဒီပြသနာတွေဟာ ခေတ်ပေါ်ကြားခံနယ်တွေမှာ ရှိနေဆဲပါပဲ။<br />
+                        Male Gaze ဆိုတာကို ဥပမာအားဖြင့် The Wolf of Wall Street ထဲက Margot Robbie တို့လို၊ Transformers ရုပ်ရှင်တွေထဲက Megan Fox တို့လို မင်းသမီးတွေဆီမှာ ထင်ထင်ရှားရှားတွေ့နိုင်တယ်။ ဇာတ်လမ်းအတွက်တစ်စုံတစ်ရာအထောက်အကူဖြစ်တာကြောင့် မဟုတ်ဘဲ straight အမျိုးသားတွေရဲ့ စိတ်ကျေနပ်မှုရစေဖို့အတွက် အမျိုးသမီး‌တွေကို ရုပ်ဝတ္ထုဆန်ဆန် နှိမ့်ချလိုက်တာမျိုးကိုဆိုလိုတယ်။ အမျိုးသမီးတွေဟာ heterosexuel အမျိုးသားတစ်ယောက်ရဲ့ အမြင်ကနေ တစ်ဆင့်ပုံဖော်ခြင်းခံရပြီး ဒီအမျိုးသမီးတွေဟာ အမျိုးသားတွေရဲ့ တပ်မက်ခြင်းကိုခံရမယ့် အရာဝတ္ထုတွေအနေနဲ့ သရုပ်ဖော်ခြင်းခံရတယ်။ တကယ်တော့ straight အမျိုးသားတွေဟာ audience ရဲ့ majority တောင်မဟုတ်ပေမဲ့ straight အမျိုးသားတွေ မြင်ချင်တဲ့ပုံစံအတိုင်း အခြားသောခေါင်းစဉ်ကိုယ်စီအောက်မှာရှိနေကြသူတိုင်းက လိုက်ပြီး ကြည့်ရှူကြရတယ်။<br />
+                        ဒါဟာ ဘာ့ကြောင့်လဲဆိုရင် လူမှုပါတ်ဝန်းကျင်ကြီးဟာ အမျိုးသားအခြေပြုဝါဒ ပေထရီရာခီ ထွန်းကားနေသေးဆဲ မို့လို့ပါပဲ။ Mulvey ယုံကြည်တာကတော့ 'အမျိုးသမီးတွေဟာ အဓိပ္ပါယ်ကို သယ်ဆောင်သူများဖြစ်ကြတယ်။ အဓိပ္ပါယ်တစ်ခုကို ဖန်တီးသူများ မဟုတ်ကြဘူး။' ဒါကြောင့်မို့လို့ အမျိုးသမီးဇာတ်‌ကောင်တွေဟာ ဇာတ်ကြောင်းကို ထိန်းချုပ်ပိုင်ခွင့်မရှိဘဲ ပြုလုပ်ခြင်းကို ခံရသူများအနေနဲ့သာ ကြည့်ရှုခြင်းခံရတယ်။ အခုခေတ်မှာတော့ ဒါတွေကို ချိုးဖောက်လာတဲ့ ရုပ်ရှင်တွေလည်း ရှိလာကြပါပြီ။ ဥပမာ Hunger Games တို့လို Frozen တို့လို ဇာတ်ကားမျိုးတွေပေါ့။ ဒါပေမဲ့ Disney က ဇာတ်ကားအများစုကတော့ Male Gaze ကို ကောင်းကောင်းကြီး ထောက်ပံ့ပေးနေတဲ့ ဇာတ်ကားတွေ ဖြစ်နေကြပြန်တယ်။ Disney princesses တွေဟာ အမျိုးသားတွေလိုချင်တဲ့ အမျိုးသမီးတွေပုံစံအနေနဲ့ ဖန်တီးထားကြတာဖြစ်သလို ဒီဇာတ်ကောင်တွေဟာ အမျိုးသားတွေရဲ့ကြီးကျယ်ခမ်းနားမှုတွေကနေတစ်ဆင့်ပဲ သူတို့ရဲ့ဇာတ်ကောင်စရိုက်ဖွံ့ဖြိုးခွင့်ကိုရကြတယ်။<br />
+                        Male Gaze ဟာ ဒီမှာတင်ရပ်မသွားဘူး။ (အခုဟာကမှ တကယ်ပြောချင်တာ။) စာရေးဆရာမကြီး မာဂရက်အက်ဝုဒ်ရဲ့ The Robber Bride ထဲမှာပါတဲ့ Male Gaze အကြောင်းက ပိုပြီး စိတ်ဝင်စားဖို့ကောင်းသလို၊ ပိုပြီးလည်း ခြောက်ခြားဖို့ကောင်းတယ်။<br />
+                        "အမျိုးသားတွေရဲ့ စိတ်ကူးယဉ်မှု(Fantasy)တွေ၊ အမျိုးသားတွေရဲ့ စိတ်ကူးယဉ်မှုတွေ အားလုံးကို အမျိုးသားတွေရဲ့ စိတ်ကူးယဉ်မှုကနေပဲ ထိန်းကျောင်းသွားတယ်။ တရွတ်တိုက်ပဲဖြစ်ဖြစ် ဒူးကျပဲဖြစ်ဖြစ် ဒါတွေအားလုံးဟာ အမျိုးသားတွေရဲ့စိတ်ကူးယဉ်မှုတွေပဲ။ ဘယ်လိုတွေလဲဆိုတော့ မင်းဟာ သူတို့ဝဲထုတ်ပစ်လိုက်တာတွေကို ယူရလောက်အောင် သန်မာနေမယ် ဒါမှမဟုတ် တစ်ခုခုတုန့်ပြန်ရလောက်အောင် အားနည်းလွန်းနေမယ် ဆိုတာမျိုးတွေပေါ့။ မင်းဟာ အမျိုးသားတွေရဲ့ စိတ်ကူးယဉ်မှုတွေကို ပျိုးထောင်မပေးနေပါဘူးလို့ ဟန်ဆောင်နေတာကတောင် အမျိုးသားတွေရဲ့စိတ်ကူးယဉ်မှုပဲ။ မင်းကိုယ်မင်း မမြင်ကွယ်ရာမှာရှိနေတာပါလို့ ဟန်ဆောင်နေတာ၊ မင်းမှာ မင်းရဲ့ကိုယ်ပိုင်ဘဝရှိနေတာပါလို့ ဟန်ဆောင်နေတာ၊ မင်းခြေထောက်ကိုဆေးပြီး ခေါင်းဖြီးနေရင်း သော့ပေါက်ကနေချောင်းကြည့်နေမယ့် အမြဲတည်ရှိနေတဲ့ စောင့်ကြည်နေသူတစ်ယောက်ရဲ့ ချောင်းမြောင်းကြည့်ရှုမှုကို သတိမထားမိရင်တောင်မှပဲ၊ တခြားဘယ်နေရာကမှ ကြည့်မနေဘူးဆိုရင်တောင် မင်းခေါင်းထဲမှာရှိတဲ့ သော့ပေါက်ကနေတစ်ဆင့်ချောင်းကြည့်နေလိမ့်မယ်။ [Highlight] မင်းဟာ မိန်းမတစ်ယောက်ကိုကြည့်နေတဲ့ ယောက်ျားတစ်ယောက် မင်းရဲ့ကိုယ်အတွင်းမှာရှိနေတဲ့ မိန်းမတစ်ယောက်ပဲ။ မင်းဟာ မင်းကိုယ်တိုင်ရဲ့ သူများလိင်ဆက်ဆံတာကို တိတ်တခိုးကြည့်ရတာနှစ်ချိုက်သူတစ်ယောက်ပဲ။ [Highlight]"<br />
+                        မာဂရက်အက်ဝုဒ်ရဲ့ အပြောအရဆိုရင် အမျိုးသမီးတစ်ယောက်ဟာ ဘာပဲလုပ်နေပါစေ တကယ်မရှိတဲ့အမျိုးသားတစ်ယောက်ကျေနပ်အောင် သူ့ရဲ့သွင်ပြင်ကိုပြုပြင်ရင်း သူ့ကိုယ်သူ သတိမမူမိဘဲ အရာဝတ္ထုအဖြစ်တစ်ဆင့်လျှော့ချခြင်းခံနေရတယ်။ ကိုယ့်ဘေးနားမှာ အမျိုးသမီးတွေပဲရှိနေရင်တောင် straight အမျိူသားတွေရဲ့ အမျိုးသမီးတွေအပေါ်သတ်မှတ်ထားတဲ့ အလှအပဆိုင်ရာစံသတ်မှတ်ချက်တွေအတိုင်း လိုက်နေမိကြတယ်။ ဒါတွေဟာ အမျိုးသားတစ်ယောက်တစ်ကယ်ရှိနေလို့မဟုတ်ဘဲ အမျိုးသမီးတွေရဲ့ခေါင်းထဲမှာနေထိုင်တဲ့ အမျိုးသားရဲ့အမြင်အတိုင်း အတွင်းထဲမှာရှိတဲ့ Male Gaze ကချောင်းမြောင်း ကြည့်ရှုနေတာကြောင့်ဖြစ်တယ်။ ဒါ‌ကို အရင်းရှင်တွေက အသုံးချပြီး အမျိုးသမီးတွေကို အမျိုးမျိုးသော ထုတ်ကုန်တွေကို ရောင်းချကြတယ်။ Male Gaze ဟာ အရင်းရှင်တွေအတွက် exploit လုပ်လို့ကောင်းတဲ့အရာတွေထဲကတစ်ခုပေါ့။ <br />
+                        ဒီလိုကိုယ့်ကို အသုံးချနေတဲ့ Male Gaze ကို ငြင်းပယ်နိုင်ဖို့ဆိုရင် ပထမဆုံးအနေနဲ့ ဒီဟာကို သတိပြုမိဖို့လိုတယ်။ ရုပ်ရှင်တွေ၊ မီဒီယာတွေ၊ ကိုယ့်ရဲ့ပါတ်ဝန်းကျင်တွေမှာပေါ့။ ဘယ်လို ဖြေရှင်းရမလဲဆိုတာကတော့ အမျိုးသမီးတစ်ယောက်က ရှင်းပြတာပဲ ပိုအဆင်ပြေလိမ့်မယ်လို့ထင်တာကြောင့် အဲဒီအကြောင်းကိုတော့ ဆက်မရေးဝောာ့ပါဘူး။ ကျွန်တော်ကိုယ်တိုင်လည်း သေချာမသိပါဘူး။<br />
+                        Male Gaze အကြောင်းပြောရရင် Blue is the warmest color တို့လို Lesbian ရုပ်ရှင်မျိုးကို ချန်ထားခဲ့လို့မရသလို Manic Pixie Dream Girl တွေကိုလည်း ချန်ထားခဲ့လို့မရပြန်ဘူး။ MPDG ဆိုတာ အမျိုးသားဇာတ်ကောင်ရဲ့ ဇာတ်ကောင်ဖွံ့ဖြိုးမှုအတွက်သီးသန့်ဖြစ်တည်နေတဲ့ (သူတို့ကိုယ်တိုင်မှာ ဆက်လက်ပြီး ဖွံ့ဖြိုးခြင်းမရှိတဲ့) စိတ်ဝင်စားစရာကောင်းပြီး အရိုင်းဆန်တဲ့၊ အမျိုးသားတွေအမြင်မှာ သိပ်မိုက်တဲ့အမျိုးသမီးဇာတ်ကောင်တွေပေါ့။ သူတို့က ဒီအမျိုးသားဇာတ်ကောင်ရဲ့ ခရီးလမ်းကို တနည်းတဖုံအထောက်အပံ့ပေးကြတယ်။ ထင်ရှားတဲ့ဇာတ်ကောင်တွေကတော့ 500 days of summer ထဲက Summer ဇာတ်ကောင်၊ Almost Famous ထဲက Penny Lane တို့လို ဇာတ်ကောင်မျိုးတွေ‌ပေါ့။ အရှေ့တိုင်းမှာဆိုရင်တော့ မူရာကာမိရဲ့ Norwegian Wood ထဲက Midori တို့လို ဇာတ်ကောင်မျိုးလို့ ပြောလို့ရတယ်။ Male Gaze ဟာ ကိုယ်သတိမထားမိတဲ့နေရာမျိုးစုံမှာ ပုံစံမျိုးစုံနဲ့ရှိနေတတ်ကြတယ်။<br />
+                        Male Gaze ဟာ အမျိုးသမီးတွေအတွက်တင်မဟုတ်ဘူး။ အမျိုးသားတွေအတွက်ပါ Beauty Standards တွေကို သတ်မှတ်ပေးတယ်။ အဲဒါကြောင့် အမျိုးသားတွေအမြင်မှာမိုက်တယ်လို့ထင်ရတဲ့ Ryan Gosling တို့လို Chris Evans တို့လိုသူတွေဟာ straight အမျိုးသားတွေအတွက် စံတွေဖြစ်လာကြပြီး သူတို့ကိုယ်ကို အဲဒီလိုပုံစံမျိုးဖြစ်အောင် ကြိုးစားကြပေမဲ့ အမျိုးသမီးတွေက Kpop တို့လို Timothée Chalamet တို့လို feminine ဖြစ်တဲ့သူတွေကို သဘောကျကြတဲ့အခါမှာတော့ သူတို့စိတ်ထဲမှာ ဝေဝါးရှုပ်ထွေးကုန်ကြတယ်။ အမျိုးသမီးတစ်ယောက် ပြောထားတာတော့ သူတို့က feminine ဖြစ်တဲ့အမျိုးသားတွေကို ကြိုက်တယ်ဆိုတာထက် သူတို့ရဲ့ masculine ဖြစ်မှုမှာ ယုံကြည်မှုရှိပြီး လူကြားထဲမှာ သူတို့ကိုယ်ကိုထုတ်ဖော်ပြရဲတဲ့သတ္တိက သူတို့ရဲ့ စိတ်ကိုထကြွစေတယ်တဲ့။ ဒါကြောင့် Male Gaze ဟာ အမျိုးသမီးတွေအတွက် အဆိပ်အတောက်ဖြစ်ရုံတင်မကဘူး အမျိုးသားတွေအတွက်ပါ အဆိပ်အတောက်ဖြစ်စေတယ်လို့ ပြောလို့ရတယ်။<br />
+                        Male Gaze ကို တုန့်ပြန်တဲ့သဘောနဲ့ပေါ်လာတဲ့ Female Gaze ဆိုတာလည်း ရှိသေးတယ်။ Female Gaze ကတော့ အမျိုးသမီးကို အပြုခံရသူအနေနဲ့ မဟုတ်ဘဲ ပြုလုပ်သူအနေနဲ့ တင်ပြခြင်းဖြစ်တယ်။ Female Gaze ဟာ objectifying မလုပ်ဘဲ ဂျန်ဒါတွေကို ညီတူညီမျှ ပုံဖော်မှုအပေါ်မှာ အသားပေးပြီး အမျိုးသမီး စာရေးဆရာ၊ ရုပ်ရှင်ဖန်တီးသူ၊ ဇာတ်ညွှန်းရေးသူတွေက ဖန်တီးနေကြတယ်။ ဒါပေမဲ့ Female Gaze ဟာလည်း ဝေဖန်ခံရမှုတွေ ရှိနေပြန်တယ်။ Female Gaze ဟာ ဂျန်ဒါပေါ်မမှီခိုဘူးဆိုပေမဲ့ inclusive ဖြစ်မှုမှာတော့ အားနည်းနေသေးပြီး လူဖြူအမျိုးသမီးတွေကိုသာ ကိုယ်စားပြုနိုင်သေးတယ်လို့ဆိုကြတယ်။ Chick Flicks တွေနဲ့ BL တွေမှာဆိုရင် အမျိုးသားတွေဟာ အမျိုးသမီးတွေရဲ့ စိတ်ကူးယဉ်မှုတွေအတွက် လိင်ပိုင်းဆိုင်ရာ အရာဝတ္ထုတွေအနေနဲ့ ပြသခြင်းခံရတယ်။ အခြားသော သာတူညီမျှမှုတွေ ဟာလည်း ပျောက်ဆုံးနေပြီး အမျိုးသားတွေဟာ ပြုသူအဖြစ်ကနေ ပြုလုပ်ခံရသူတွေအဖြစ် တစ်ဆင့်နှိမ့်ခြင်းခံရပြီး Male Gaze ရဲ့ ဂျန်ဒါပြောင်းလဲထားတဲ့ Version တစ်မျိုးဖြစ်လာတယ်။ ဒီအခါမှာ Female Gaze ဟာလည်း Male Gaze နည်းတူ ပြသနာ ရှိလာပြန်တယ်။ လောလောဆယ်မှာ ဒီပြသနာတွေကို ဘယ်လိုဖြေရှင်းကြမလဲဆိုတာထက် ဒီလိုပြသနာတွေရှိနေတယ်ဆိုတာကို သတိထားမိစေချင်တာ ကတစ်ကြောင်း၊ စာရေးဆရာမကြီး မာဂရက်အက်ဝုဒ်ရဲ့ Male Gaze Theory ကိုဖတ်မိရာကနေ စိတ်ဝင်စားတာနဲ့ ပြန်လည်ရေးသားလိုတာကလည်း တစ်ကြောင်းမို့လို့ အခုလိုရေးသားတင်ပြလိုက်ပါတယ်။ ကိုးကားထားတဲ့ ဆောင်းပါးတွေကို အောက်မှာထည့်ပေးထားပါတယ်။ <br />
+                        https://theeverydaymagazine.co.uk/.../womens-greatest...<br />
+                        https://www.filminquiry.com/film-theory-basics-laura.../<br />
+                        https://aninjusticemag.com/the-male-gaze-vs-female-gaze...<br />
+                        https://en.wikipedia.org/wiki/Female_gaze<br />
+                        https://www.verywellmind.com/what-is-the-male-gaze-5118422
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
+        <script>
+            function buttonClick(){
+                var pagebutton= document.getElementById("sidebarToggle");
+                pagebutton.click();
+            }
+
+            function changeBgColor() {
+                if (document.getElementById("toggle").value == "on") {
+                    document.getElementById("toggle").value = "off";
+                    document.body.style.background = "black";
+                    document.querySelectorAll('p').forEach(e => e.style.color = "white");
+                    document.querySelectorAll('h1').forEach(e => e.style.color = "white");
+                    var collection = document.getElementsByClassName('btnClick');
+                    for(var i = 0; i < collection.length; ++i) {
+                        collection[i].style.background = "black";
+                        collection[i].style.color = "white";
+                    }
+                    document.getElementById("sidebar-wrapper").background = "black"
+                } else {
+                    document.getElementById("toggle").value = "on";
+                    document.body.style.background = "white";
+                    document.querySelectorAll('p').forEach(e => e.style.color = "black");
+                    document.querySelectorAll('h1').forEach(e => e.style.color = "black");
+                    var collection = document.getElementsByClassName('btnClick');
+                    for(var i = 0; i < collection.length; ++i) {
+                        collection[i].style.background = "white";
+                        collection[i].style.color = "black";
+                    }
+                    document.getElementById("sidebar-wrapper").background = "white"
+                }
+            }
+function loadChapter(chapter) {
+            switch (chapter) {
+                case 1: document.getElementById("header").innerHTML = "ရုပ်ရှင်၊ အနုပညာနှင့် အခြားသောကြားခံနယ်တို့မှ အမျိုးသားများ၏ ငေးစိုက်ကြည့်မှု (Male Gaze)";
+                document.getElementById("body").innerHTML = document.getElementById("chapter1").innerHTML; break;
+                case 2: document.getElementById("header").innerHTML = "အခန်း ၂။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter2").innerHTML; break;
+                case 3: document.getElementById("header").innerHTML = "အခန်း ၃။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter3").innerHTML; break;
+                case 4: document.getElementById("header").innerHTML = "အခန်း ၄။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter4").innerHTML; break;
+                case 5: document.getElementById("header").innerHTML = "အခန်း ၅။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter5").innerHTML; break;
+                case 6: document.getElementById("header").innerHTML = "အခန်း ၆။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter6").innerHTML; break;
+                case 7: document.getElementById("header").innerHTML = "အခန်း ၇။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter7").innerHTML; break;
+                case 8: document.getElementById("header").innerHTML = "အခန်း ၈။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter8").innerHTML; break;
+                case 9: document.getElementById("header").innerHTML = "အခန်း ၉။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter9").innerHTML; break;
+                case 10: document.getElementById("header").innerHTML = "အခန်း ၁၀။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter10").innerHTML; break;
+                case 11: document.getElementById("header").innerHTML = "အခန်း ၁၁။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter11").innerHTML; break;
+                case 12: document.getElementById("header").innerHTML = "အခန်း ၁၂။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter12").innerHTML; break;
+                case 13: document.getElementById("header").innerHTML = "အခန်း ၁၃။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter13").innerHTML; break;
+                case 14: document.getElementById("header").innerHTML = "အခန်း ၁၄။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter14").innerHTML; break;
+                case 15: document.getElementById("header").innerHTML = "အခန်း ၁၅။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter15").innerHTML; break;
+                case 16: document.getElementById("header").innerHTML = "အခန်း ၁၆။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter16").innerHTML; break;
+                case 17: document.getElementById("header").innerHTML = "အခန်း ၁၇။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter17").innerHTML; break;
+                case 18: document.getElementById("header").innerHTML = "အခန်း ၁၈။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter18").innerHTML; break;
+                case 19: document.getElementById("header").innerHTML = "အခန်း ၁၉။";
+                document.getElementById("body").innerHTML = document.getElementById("chapter19").innerHTML; break;
+                default: break;
+            }
+        }
+        </script>
+    </body>
+</html>
